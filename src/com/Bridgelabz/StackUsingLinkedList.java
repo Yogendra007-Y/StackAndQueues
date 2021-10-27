@@ -24,6 +24,24 @@ public class StackUsingLinkedList<E> {
         top = temp;
 
     }
+    //pop method to pop the stack value
+    public void pop(){
+        if(top == null){
+            System.out.println("stack underflow");
+        }
+        else
+            top = (top).link;
+    }
+    //peek method give top value
+    public E peek(){
+        if(top != null){
+            return top.data;
+        }
+        else{
+            System.out.println("stack underflow");
+            return null;
+        }
+    }
     //Display Method To Show Stack Data
     public void display() {
         Node temp = null;
